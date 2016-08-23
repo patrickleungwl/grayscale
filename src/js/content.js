@@ -1,0 +1,6 @@
+const styleUtil = require('./style-util.js');
+
+styleUtil.controlStyle();
+
+window.removeEventListener('focus', styleUtil.controlStyle);
+window.addEventListener('focus', styleUtil.controlStyle);

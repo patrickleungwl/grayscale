@@ -1,0 +1,49 @@
+{
+  "name": "grayscale",
+  "version": "0.0.0",
+  "description": "See a web page in gray scale",
+  "scripts": {
+    "clean": "rimraf lib/js lib/css lib/icons grayscale.zip",
+    "test": "xo",
+    "prebuild": "npm run clean && npm test",
+    "build": "webpack",
+    "zip": "npm run build && zip -r grayscale.zip lib"
+  },
+  "keywords": [
+    "focus",
+    "indicator",
+    "keyboard",
+    "a11y",
+    "accessibility"
+  ],
+  "author": "Sarbbottam Bandyopadhyay <sarbbottam@gmail.com> (https://sarbbottam.github.io/)",
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:sarbbottam/grayscale.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sarbbottam/grayscale/issues"
+  },
+  "homepage": "https://github.com/sarbbottam/grayscale",
+  "devDependencies": {
+    "copy-webpack-plugin": "^3.0.1",
+    "rimraf": "^2.5.2",
+    "webpack": "^1.13.1",
+    "xo": "^0.16.0"
+  },
+  "xo": {
+    "envs": [
+      "browser"
+    ],
+    "globals": [
+      "chrome"
+    ],
+    "ignores": [
+      "lib/**/*"
+    ],
+    "esnext": true,
+    "space": true
+  }
+}
